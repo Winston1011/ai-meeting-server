@@ -25,3 +25,155 @@ net/http.(*conn).serve
 2024-01-02T17:02:47.292+0800	info		{"msg": "[HTTP] server stopping"}
 2024-01-02T17:02:47.292+0800	info		{"msg": "[gRPC] server stopping"}
 2024-01-02T17:02:47.293+0800	info		{"msg": "closing the data resources"}
+2024-01-02T17:04:21.140+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T17:04:21.140+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T17:04:26.170+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:04:26.981+0800	error		{"msg": "find err: connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:06:28.596+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T17:06:28.597+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T17:06:28.597+0800	info		{"msg": "closing the data resources"}
+2024-01-02T17:06:31.581+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T17:06:31.581+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T17:06:35.234+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:06:36.236+0800	error		{"msg": "find err: connection pool for www.nonezero.top:27017 was cleared because another operation failed with: connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:09:01.990+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T17:09:01.991+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T17:09:01.992+0800	info		{"msg": "closing the data resources"}
+2024-01-02T17:09:04.476+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T17:09:04.476+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T17:09:08.260+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:09:09.260+0800	error		{"msg": "find err: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: http://www.nonezero.top:27017, Type: Unknown, Last error: dial tcp: address http://www.nonezero.top:27017: too many colons in address }, ] }"}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:09:23.235+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:09:24.237+0800	error		{"msg": "find err: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: http://www.nonezero.top:27017, Type: Unknown, Last error: dial tcp: address http://www.nonezero.top:27017: too many colons in address }, ] }"}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:09:33.405+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:09:34.406+0800	error		{"msg": "find err: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: http://www.nonezero.top:27017, Type: Unknown, Last error: dial tcp: address http://www.nonezero.top:27017: too many colons in address }, ] }"}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:09:36.797+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T17:09:36.798+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T17:09:36.798+0800	info		{"msg": "closing the data resources"}
+2024-01-02T17:09:39.419+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T17:09:39.419+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T17:09:41.639+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:09:42.640+0800	error		{"msg": "find err: connection pool for www.nonezero.top:27017 was cleared because another operation failed with: connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:09:52.021+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T17:09:52.021+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T17:09:52.021+0800	info		{"msg": "closing the data resources"}

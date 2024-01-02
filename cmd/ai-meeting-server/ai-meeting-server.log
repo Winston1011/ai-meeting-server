@@ -1,0 +1,8 @@
+2024-01-02T19:53:24.992+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T19:53:24.992+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T19:53:40.687+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T19:53:40.842+0800	info		{"msg": "{\"cursor\": {\"id\": {\"$numberLong\":\"0\"},\"ns\": \"meeting.meeting\",\"firstBatch\": []},\"ok\": {\"$numberDouble\":\"1.0\"}}"}
+2024-01-02T19:53:40.998+0800	info		{"msg": "{\"cursor\": {\"firstBatch\": [],\"id\": {\"$numberLong\":\"0\"},\"ns\": \"meeting.meeting\"},\"ok\": {\"$numberDouble\":\"1.0\"}}"}
+2024-01-02T19:53:57.993+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T19:53:57.993+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T19:53:57.993+0800	info		{"msg": "closing the data resources"}

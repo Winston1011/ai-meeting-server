@@ -6,10 +6,23 @@ server:
     addr: 0.0.0.0:9000
     timeout: 1s
 data:
-  database:
-    driver: mysql
-    source: root:root@tcp(127.0.0.1:3306)/test
-  redis:
-    addr: 127.0.0.1:6379
-    read_timeout: 0.2s
-    write_timeout: 0.2s
+  mongo:
+    host: mongodb:27017
+    username: root
+    password: passwd
+    max_pool_size: 20
+    min_pool_size: 5
+    connect_timeout: 2s
+    dbname: meeting
+  openAi:
+    apiKey: 
+    model: gpt-3.5-turbo-16k-0613
+    temperature: 0
+    presencePenalty: 0
+  # 本次存储
+  assetsPath: assets
+  # 腾讯cos存储
+  txCos:
+    url: 
+    secretId: 
+    secretKey: 

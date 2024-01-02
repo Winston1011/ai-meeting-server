@@ -24,15 +24,25 @@ import (
 
 // wireApp init kratos application.
 func wireApp(confServer *conf.Server, confData *conf.Data, logger log.Logger) (*kratos.App, func(), error) {
-	dataData, cleanup, err := data.NewData(confData, logger)
+	database := data.NewMongo(confData)
+	dataData, cleanup, err := data.NewData(confData, logger, database)
 	if err != nil {
 		return nil, nil, err
 	}
-	greeterRepo := data.NewGreeterRepo(dataData, logger)
-	greeterUsecase := biz.NewGreeterUsecase(greeterRepo, logger)
-	greeterService := service.NewGreeterService(greeterUsecase)
-	grpcServer := server.NewGRPCServer(confServer, greeterService, logger)
-	httpServer := server.NewHTTPServer(confServer, greeterService, logger)
+	roleTemplateRepo := data.NewRoleTemplateRepo(dataData, logger)
+	roleTemplateUsecase := biz.NewRoleTemplateUsecase(roleTemplateRepo, logger)
+	roleTemplateService := service.NewRoleTemplateService(roleTemplateUsecase, logger)
+	grpcServer := server.NewGRPCServer(confServer, roleTemplateService, logger)
+	meetingTemplateRepo := data.NewMeetingTemplateRepo(dataData, logger)
+	meetingTemplateUsecase := biz.NewMeetingTemplateUsecase(meetingTemplateRepo, roleTemplateRepo, logger)
+	meetingTemplateService := service.NewMeetingTemplateService(meetingTemplateUsecase, logger)
+	imageUsecase := biz.NewImageUsecase(confData, logger)
+	imageService := service.NewImageService(imageUsecase, confData, logger)
+	meetingRepo := data.NewMeetingRepo(dataData, logger)
+	gpt := biz.NewGpt(confData, logger)
+	meetingUsecase := biz.NewMeetingUsecase(meetingRepo, meetingTemplateRepo, gpt, logger)
+	meetingService := service.NewMeetingService(meetingUsecase, logger)
+	httpServer := server.NewHTTPServer(confServer, confData, roleTemplateService, meetingTemplateService, imageService, meetingService, logger)
 	app := newApp(logger, grpcServer, httpServer)
 	return app, func() {
 		cleanup()

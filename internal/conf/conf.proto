@@ -26,16 +26,32 @@ message Server {
 }
 
 message Data {
-  message Database {
-    string driver = 1;
-    string source = 2;
+  message Mongo {
+    string host = 1;
+    string username = 2;
+    string password = 3;
+    int32 max_pool_size = 4;
+    int32 min_pool_size = 5;
+    google.protobuf.Duration connect_timeout = 6;
+    string dbname = 7;
   }
-  message Redis {
-    string network = 1;
-    string addr = 2;
-    google.protobuf.Duration read_timeout = 3;
-    google.protobuf.Duration write_timeout = 4;
+
+  message OpenAi {
+    string url = 1;
+    string apiKey = 2;
+    string model = 3;
+    float temperature = 4;
+    float presencePenalty = 5;
   }
-  Database database = 1;
-  Redis redis = 2;
+
+  message TxCos {
+    string url = 1;
+    string secretId = 2;
+    string secretKey = 3;
+  }
+
+  Mongo mongo = 1;
+  OpenAi openAi = 2;
+  string assetsPath = 3;
+  TxCos txCos = 4;
 }

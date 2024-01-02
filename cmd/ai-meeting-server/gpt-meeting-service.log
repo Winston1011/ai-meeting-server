@@ -1,0 +1,27 @@
+2024-01-02T17:00:33.737+0800	info		{"msg": "[gRPC] server listening on: [::]:9000"}
+2024-01-02T17:00:33.737+0800	info		{"msg": "[HTTP] server listening on: [::]:8000"}
+2024-01-02T17:02:23.174+0800	debug		{"msg": "{0 0 }"}
+2024-01-02T17:02:24.176+0800	error		{"msg": "find err: server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:27017, Type: Unknown, Last error: dial tcp: lookup mongodb: no such host }, ] }"}
+ai-meeting-server/internal/data.(*meetingRepo).List
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/data/meeting.go:69
+ai-meeting-server/internal/biz.(*MeetingUsecase).HistoryMeeting
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/biz/meeting.go:130
+ai-meeting-server/internal/service.(*MeetingService).History
+	/Users/dengzhi01/Documents/dzprojects/go/src/ai-meeting-server/internal/service/meeting.go:59
+github.com/go-kratos/kratos/v2/transport/http.(*Router).Handle.func1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/router.go:49
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/go-kratos/kratos/v2/transport/http.NewServer.(*Server).filter.func1.1
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/go-kratos/kratos/v2@v2.7.2/transport/http/server.go:292
+net/http.HandlerFunc.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2136
+github.com/gorilla/mux.(*Router).ServeHTTP
+	/Users/dengzhi01/Documents/dzprojects/go/pkg/mod/github.com/gorilla/mux@v1.8.1/mux.go:212
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2938
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:2009
+2024-01-02T17:02:47.292+0800	info		{"msg": "[HTTP] server stopping"}
+2024-01-02T17:02:47.292+0800	info		{"msg": "[gRPC] server stopping"}
+2024-01-02T17:02:47.293+0800	info		{"msg": "closing the data resources"}

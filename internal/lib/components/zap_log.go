@@ -58,7 +58,7 @@ func (l *ZapLogger) Log(level log.Level, keyvals ...interface{}) error {
 // 日志自动切割，采用 lumberjack 实现的
 func getLogWriter() zapcore.WriteSyncer {
 	lumberJackLogger := &lumberjack.Logger{
-		Filename:   "./gpt-meeting-service.log",
+		Filename:   "./ai-meeting-server.log",
 		MaxSize:    10,
 		MaxBackups: 5,
 		MaxAge:     30,
